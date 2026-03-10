@@ -9,4 +9,8 @@ Replication and analysis of [DNA-DetectLLM](https://arxiv.org/abs/2509.15550) (N
 - `replication-and-analysis.ipynb` - Main replication notebook covering Tables 1, 2, 10 along with component ablation, temperature sensitivity, and short text analysis
 - `demo-notebook.ipynb` - Quick demo showing how DNA-DetectLLM works on a few sample texts
 
+## Code
+
+- `dna_detectllm/` - The paper's official detection code (detector, metrics, utils) with a minor modification for 4-bit NF4 quantization so it fits on T4 GPUs
+
 Both notebooks were run on Kaggle with 2x T4 GPUs. They pull data from the [official repo](https://github.com/Xiaoweizhu57/DNA-DetectLLM) and use Falcon-7B + Falcon-7B-Instruct loaded in 4-bit NF4 quantization.
