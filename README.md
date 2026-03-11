@@ -13,4 +13,10 @@ Replication and analysis of [DNA-DetectLLM](https://arxiv.org/abs/2509.15550) (N
 
 - `dna_detectllm/` - The paper's official detection code (detector, metrics, utils) with a minor modification for 4-bit NF4 quantization so it fits on T4 GPUs
 
-Both notebooks were run on Kaggle with 2x T4 GPUs. They pull data from the [official repo](https://github.com/Xiaoweizhu57/DNA-DetectLLM) and use Falcon-7B + Falcon-7B-Instruct loaded in 4-bit NF4 quantization.
+## How to run
+
+1. Upload the notebook you want to run to Kaggle
+2. Zip the `dna_detectllm/` directory and upload it as a Kaggle dataset
+3. Update the path in the notebook cell that copies `dna_detectllm` to point to your uploaded dataset path (e.g. `/kaggle/input/your-dataset-name/dna_detectllm`)
+4. Make sure you have 2x T4 GPUs enabled in the Kaggle notebook settings
+5. Run all cells to replicate the experiments
